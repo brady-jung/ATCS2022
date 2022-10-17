@@ -15,8 +15,10 @@ body {
    
     border-radius: 30px;
     border: 2px solid #0000ff;
-    width: 520px;
+    width: 640px;
     height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main{
