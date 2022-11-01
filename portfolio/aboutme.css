@@ -2,7 +2,23 @@ body {
     background-color: rgb(255, 252, 226)
 }
 
+.navbar{
+    background-color:rgb(80, 80, 80);
+    color: rgb(255, 252, 226);
+}
 
+.navbar-light .navbar-nav .nav-link{
+    color:rgb(255, 252, 226);
+}
+
+.btn-outline-success{
+    color:rgb(255, 252, 226);
+    border-color:rgb(255, 252, 226);
+}
+
+.form-control{
+    background-color: rgb(255, 252, 226);
+}
 .main img {
     width: 620px;
     height: 400px;
