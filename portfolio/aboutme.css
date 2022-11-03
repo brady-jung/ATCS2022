@@ -45,6 +45,7 @@ body {
 }
 
 .container{
+    background-color: rgb(255, 252, 226);
     padding-top: 70px;
     font-family: Impact;
     display: flex;
@@ -56,3 +57,4 @@ body {
 .main {
     text-align: center;
 }
+
