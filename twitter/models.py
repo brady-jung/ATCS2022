@@ -26,6 +26,9 @@ class User(Base):
                              secondaryjoin="User.username==Follower.follower_id",
                              overlaps="following")
 
+    def __repr__(self):
+        return "@" + self.username
+
 
 class Follower(Base):
     __tablename__ = "followers"
@@ -36,13 +39,36 @@ class Follower(Base):
     following_id = Column('following_id', TEXT, ForeignKey('users.username'))
 
 class Tweet(Base):
+    __tablename__ = "tweets"
     # TODO: Complete the class
-    pass
+
+    #Columns
+    id = Column("id", INTEGER, primary_key=True)
+    content = Column("content", TEXT)
+    timestamp = Column("timestamp", TEXT)
+    username = Column("username", TEXT, ForeignKey('users.username'))
+    
+    def __repr__(self):
+        return "@" + self.username + "\n" + self.content + "\n" + 
 
 class Tag(Base):
+    __tablename__ = "tags"
     # TODO: Complete the class
-    pass
+
+    #Columns
+    id = Column("id", INTEGER, primary_key=True)
+    content = Column("content", TEXT)
+    
+
+    def __repr__(self):
+        return "#" + self.content
 
 class TweetTag(Base):
+    __tablename__ = "tweet_tags"
     # TODO: Complete the class
-    pass
+
+    #Columns
+    id = Column("id", INTEGER, primary_key=True)
+    tweet_id = Column("tweet_id", INTEGER, ForeignKey('tweets.id'))
+    tag_id = Column("tag_id", INTEGER, ForeignKey('tags.id'))
+    
