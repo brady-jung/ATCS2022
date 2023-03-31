@@ -83,11 +83,25 @@ class Twitter:
     register, or exit.
     """
     def startup(self):
-        pass
+        print("Welcome to ATCS twitter!")
+        choice = int(input("Please select a menu option: \n1: Login \n2: Register User \n3: Exit\n"))
+        if (choice == 1):
+            self.login()
+        elif (choice == 2):
+            self.register_user()
+        else:
+            self.end()
 
     def follow(self):
-        pass
-
+        follow = input("Who would you like to follow?\n")
+        for i in self.current_user.following:
+            if(follow == i.username):
+                print("You already follow" + follow)
+                return
+            
+        self.currentuser.following.append(db_session.query(User.where(User.username == follow).first()))
+        db_session.commit()
+        print("You are now following " + follow)
     def unfollow(self):
         pass
 
