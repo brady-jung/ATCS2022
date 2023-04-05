@@ -3,7 +3,7 @@ The file that holds the schema/classes
 that will be used to create objects
 and connect to data tables.
 """
-
+#for submission
 from sqlalchemy import ForeignKey, Column, INTEGER, TEXT, DATETIME
 from sqlalchemy.orm import relationship
 from database import Base

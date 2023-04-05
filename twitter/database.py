@@ -2,7 +2,7 @@
 The file that holds the logic to 
 initialize and connect to the database.
 """
-
+#for submission
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
